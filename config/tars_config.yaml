@@ -1,0 +1,47 @@
+# TARS Robot Configuration
+robot:
+  name: "TARS"
+  humor_level: 60
+  honesty_level: 90
+  
+voice:
+  enabled: true
+  language: "en-US"
+  wake_words: ["tars", "robot"]
+  confidence_threshold: 0.7
+  
+vision:
+  enabled: true
+  camera_index: 0
+  resolution: [640, 480]
+  fps: 30
+  
+motion:
+  enabled: true
+  servo_count: 3
+  movement_speed: 0.5
+  
+sensors:
+  ultrasonic:
+    front_distance_threshold: 30.0
+    side_distance_threshold: 20.0
+  imu:
+    fall_threshold: 2.0
+    
+safety:
+  emergency_stop_enabled: true
+  max_operation_time: 14400  # 4 hours in seconds
+  
+ui:
+  window_size: [1200, 800]
+  theme: "dark"
+  fps: 60
+  
+simulation:
+  mode: true  # Set to false for real hardware
+  sensor_noise: 0.1
+  
+logging:
+  level: "INFO"
+  file: "logs/tars.log"
+
